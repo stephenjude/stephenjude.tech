@@ -18,6 +18,17 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148840168-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-148840168-1');
+    </script>
 </head>
 
 <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
@@ -86,7 +97,7 @@
                 </a>
             </li>
             <li class="inline-block">
-                <a href="https://www.linkedin.com/in/stephenjudeso/" target="_blank"itle="LinkedIn">
+                <a href="https://www.linkedin.com/in/stephenjudeso/" target="_blank" itle="LinkedIn">
                     <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
