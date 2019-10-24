@@ -34,10 +34,6 @@ $post = $data['post'];
     </a>
 </p>
 
-@if ($post->featured_image)
-<img src="{{ $post->featured_image }}" alt="{{ $post->title }} cover image" class="mb-2">
-@endif
-
 <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
     {!! $post->body !!}
 </div>
