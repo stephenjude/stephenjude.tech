@@ -24,9 +24,6 @@ $post = $data['post'];
 
 
 @section('body')
-@if ($post->featured_image)
-<img src="{{ $post->featured_image }}" alt="{{ $post->title }} cover image" class="mb-2">
-@endif
 
 <h1 class="leading-none mb-2">{{ $post->title }}</h1>
 
@@ -37,6 +34,9 @@ $post = $data['post'];
     </a>
 </p>
 
+@if ($post->featured_image)
+<img src="{{ $post->featured_image }}" alt="{{ $post->title }} cover image" class="mb-2">
+@endif
 
 <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
     {!! $post->body !!}
