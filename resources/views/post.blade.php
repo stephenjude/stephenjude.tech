@@ -3,7 +3,6 @@
 
 @php
 $post = $data['post'];
-
 @endphp
 
 @push('meta')
@@ -28,7 +27,7 @@ $post = $data['post'];
 <h1 class="leading-none mb-2">{{ $post->title }}</h1>
 
 <p class="text-gray-700 text-xm md:mt-0">
-    Published {{ format_date($post->published_at) }} • 
+    Published {{ format_date($post->published_at) }} •
     <a class="uppercase text-gray-700 text-base md:mt-0">
         {{ read_time($data['post']->body) }}
     </a>
@@ -55,10 +54,30 @@ $post = $data['post'];
         @endif
     </div>
 </nav>
-@endsection
 
-@section('newsletter')
 <section role="main" class="flex-auto w-full container max-w-4xl mx-auto px-6">
     @include('components.newsletter-signup')
 </section>
+
+<div class="mt-5" id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    
+    var disqus_config = function () {
+    this.page.url = `{{post_url($post->slug)}}`;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = `{{$post->slug}}`;  // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+        s.src = 'https://stephenjude-tech.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 @endsection
