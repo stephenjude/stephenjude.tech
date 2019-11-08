@@ -31,7 +31,7 @@
                 <guid isPermaLink="true">{{ post_url($post->slug) }}</guid>
 
                 <description>
-                    <![CDATA[{!! $post->description !!}]]>
+                    <![CDATA[{!! $post->excerpt !!}]]>
                 </description>
 
                 <content:encoded>
