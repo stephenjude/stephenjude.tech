@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Artisan;
 use Wink\WinkPost;
 
 class BlogController extends Controller
@@ -21,7 +22,6 @@ class BlogController extends Controller
                 ->orderBy('publish_date', 'DESC')
                 ->simplePaginate(12)
         ];
-
         return view('index', compact('data'));
     }
 
@@ -51,7 +51,7 @@ class BlogController extends Controller
         $post = $posts->firstWhere('slug', $slug);
 
         if (optional($post)->published) {
-            
+
             $next = $posts->sortBy('publish_date')->firstWhere('publish_date', '>', optional($post)->publish_date);
             $prev = $posts->sortBy('publish_date')->firstWhere('publish_date', '<', optional($post)->publish_date);
 
@@ -78,20 +78,8 @@ class BlogController extends Controller
      */
     public function updateIndexedArticles()
     {
-        $data = collect(WinkPost::live()
-            ->orderBy('publish_date', 'DESC')
-            ->get())->map(function ($item, $key) {
-            return [
-                "title" => $item->title,
-                "link" => post_url($item->slug),
-                "snippet" => $item->excerpt
-            ];
-        });
-
-        $file_path = public_path('index.json');
-
-        file_put_contents($file_path, $data->toJson());
-
-        return "Indexed articles updated for live search";
+        Artisan::call('generate:feed');
+        Artisan::call('generate:index');
+        return "rss feed and indexed articles generated succesfully";
     }
 }

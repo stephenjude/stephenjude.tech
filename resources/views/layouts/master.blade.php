@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="{{ $meta['description'] ?? config('services.meta.mantra') }}">
-
+    <link rel="alternate" type="application/rss+xml" title="stephenjude.tech" href="http://stephenjude.tech/rss.xml" />
     <title>{{ $meta['title'] ?? config('services.meta.site_name') }} ― {{ $meta['description'] ?? config('services.meta.mantra') }}</title>
 
     <link rel="home" href="{{ url('/') }}">
@@ -105,7 +105,7 @@
                 </a>
             </li>
             <li class="inline-block">
-                <a href="#" target="_blank" title="Atom">
+                <a href="http://stephenjude.tech/rss.xml" target="_blank" title="Atom">
                     <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-rss fa-stack-1x fa-inverse"></i>

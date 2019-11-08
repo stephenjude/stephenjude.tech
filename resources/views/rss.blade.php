@@ -26,21 +26,21 @@
                     <![CDATA[{!! $post->title !!}]]>
                 </title>
 
-                <link>{{ route('pages.post', $post->slug) }}</link>
+                <link>{{ post_url($post->slug) }}</link>
 
-                <guid isPermaLink="true">{{ route('pages.post', $post->slug) }}</guid>
+                <guid isPermaLink="true">{{ post_url($post->slug) }}</guid>
 
                 <description>
                     <![CDATA[{!! $post->description !!}]]>
                 </description>
 
                 <content:encoded>
-                    <![CDATA[{!! $post->content !!}]]>
+                    <![CDATA[{!! $post->body !!}]]>
                 </content:encoded>
 
-                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">{{ $post->author }}</dc:creator>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">{{ $post->author->name }}</dc:creator>
 
-                <pubDate>{{ $post->created_at->format(DateTime::RSS) }}</pubDate>
+                <pubDate>{{ $post->publish_date->format(DateTime::RSS) }}</pubDate>
 
             </item>
 
