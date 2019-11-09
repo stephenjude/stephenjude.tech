@@ -38,18 +38,19 @@ $post = $data['post'];
 </div>
 
 <nav class="flex justify-between text-sm md:text-base">
-    <div>
-        @if ($next = $data['next'])
-        <a href="{{post_url($next->slug) }}" title="Older Post: {{ $next->title }}">
-            &LeftArrow; {{ $next->title }}
-        </a>
-        @endif
-    </div>
 
     <div>
         @if ($previous = $data['prev'])
         <a href="{{ post_url($previous->slug) }}" title="Newer Post: {{ $previous->title }}">
             {{ $previous->title }} &RightArrow;
+        </a>
+        @endif
+    </div>
+    
+    <div>
+        @if ($next = $data['next'])
+        <a href="{{post_url($next->slug) }}" title="Older Post: {{ $next->title }}">
+            &LeftArrow; {{ $next->title }}
         </a>
         @endif
     </div>
@@ -64,12 +65,12 @@ $post = $data['post'];
     /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-    
-    var disqus_config = function () {
-    this.page.url = `{{post_url($post->slug)}}`;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = `{{$post->slug}}`;  // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+
+    var disqus_config = function() {
+        this.page.url = `{{post_url($post->slug)}}`; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = `{{$post->slug}}`; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
-    
+
     (function() { // DON'T EDIT BELOW THIS LINE
         var d = document,
             s = d.createElement('script');
