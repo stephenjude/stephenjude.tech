@@ -57,11 +57,12 @@
 
     <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-16 px-6">
         @yield('body')
+
+        @yield('newsletter')
     </main>
 
-    @yield('newsletter')
 
-    <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
+    <footer class="bg-white text-center text-sm mt-2 py-4" role="contentinfo">
 
         <ul class="list-reset inline-block text-center">
             <li class="inline-block">

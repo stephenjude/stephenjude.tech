@@ -3,7 +3,7 @@
     <div id="mc_embed_signup">
         <form action="https://gmail.us20.list-manage.com/subscribe/post" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
             <div id="mc_embed_signup_scroll">
-                <h2>Join my mailing list</h2>
+                <h5 class="text-center">Join my weekly newsletter and never miss out on new tutorials, tips, and more.</h5>
                 <div class="mc-field-group">
                     <label for="">Email Address</label>
 

@@ -37,6 +37,10 @@ $post = $data['post'];
     {!! $post->body !!}
 </div>
 
+<section role="main" class="flex-auto w-full container max-w-4xl mx-auto px-6">
+    @include('components.newsletter-signup')
+</section>
+
 <nav class="flex justify-between text-sm md:text-base">
 
     <div>
@@ -50,15 +54,11 @@ $post = $data['post'];
     <div>
         @if ($next = $data['next'])
         <a href="{{post_url($next->slug) }}" title="Older Post: {{ $next->title }}">
-           {{ $next->title }} &RightArrow;
+           {{ $next->title }} &RightArrow;  
         </a>
         @endif
     </div>
 </nav>
-
-<section role="main" class="flex-auto w-full container max-w-4xl mx-auto px-6">
-    @include('components.newsletter-signup')
-</section>
 
 <div class="mt-5" id="disqus_thread"></div>
 <script>
