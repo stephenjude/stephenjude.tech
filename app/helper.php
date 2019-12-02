@@ -9,7 +9,7 @@ function format_date($date)
 {
     $date = \Carbon\Carbon::parse($date);
 
-    if (now()->diffInDays($date) <= 7) {
+    if (now()->diffInDays($date) <= 23) {
         return $date->diffForHumans();
     }
 
