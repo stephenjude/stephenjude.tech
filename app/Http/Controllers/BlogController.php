@@ -82,4 +82,16 @@ class BlogController extends Controller
         Artisan::call('generate:index');
         return "rss feed and indexed articles generated succesfully";
     }
+
+
+
+    /**
+     * show email subscription form
+     *
+     * @return string
+     */
+    public function newsletter()
+    {
+        return view('newsletter');
+    }
 }
