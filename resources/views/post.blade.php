@@ -46,7 +46,7 @@ $post = $data['post'];
     <div>
         @if ($previous = $data['prev'])
         <a href="{{ post_url($previous->slug) }}" title="Newer Post: {{ $previous->title }}">
-        &LeftArrow; {{ $previous->title }} 
+        &LeftArrow; {{ $previous->title }}
         </a>
         @endif
     </div>
@@ -54,7 +54,7 @@ $post = $data['post'];
     <div>
         @if ($next = $data['next'])
         <a href="{{post_url($next->slug) }}" title="Older Post: {{ $next->title }}">
-           {{ $next->title }} &RightArrow;  
+           {{ $next->title }} &RightArrow;
         </a>
         @endif
     </div>
