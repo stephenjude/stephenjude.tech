@@ -10,6 +10,8 @@
 @section('body')
 <h1>Recent Articles</h1>
 
+@include('components.ads')
+
 <hr class="border-b my-6">
 
 @foreach ($data['posts'] as $post)

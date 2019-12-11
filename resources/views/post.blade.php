@@ -33,6 +33,8 @@ $post = $data['post'];
     </a>
 </p>
 
+@include('components.ads')
+
 <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
     {!! $post->body !!}
 </div>

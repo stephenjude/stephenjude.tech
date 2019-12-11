@@ -28,6 +28,8 @@
     I am also available for speaking or consulting.
 </p>
 
+@include('components.ads')
+
 @endsection
 
 @section('newsletter')

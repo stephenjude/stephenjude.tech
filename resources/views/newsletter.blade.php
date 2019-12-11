@@ -15,6 +15,8 @@
             Here is an archive of what I have sent out so far :)
         </a>
     </h5>
+
+    @include('components.ads')
 </section>
 
 @endsection
