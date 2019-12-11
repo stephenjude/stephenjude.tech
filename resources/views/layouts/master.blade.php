@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
+    <meta name="google-site-verification" content="XWdKmbYh6Vr1RwMJnbOyh7CWiFY8rwT1ZYXu01GQPgs" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="{{ $meta['description'] ?? config('services.meta.mantra') }}">
     <link rel="alternate" type="application/rss+xml" title="stephenjude.tech" href="http://stephenjude.tech/rss.xml" />
-    <title>{{ $meta['title'] ?? config('services.meta.site_name') }} ― {{ $meta['description'] ?? config('services.meta.mantra') }}</title>
+    <title>{{ $meta['title'] ?? config('services.meta.site_name') }} ―
+        {{ $meta['description'] ?? config('services.meta.mantra') }}</title>
 
     <link rel="home" href="{{ url('/') }}">
     <link rel="icon" href="{{asset('img/favicon.ico')}}">
@@ -15,7 +17,8 @@
 
     @stack('meta')
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i"
+        rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -35,10 +38,13 @@
     <header class="flex items-center shadow bg-white border-b h-24 py-4" role="banner">
         <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
             <div class="flex items-center">
-                <a href="{{url('/')}}" title="{{ config('services.meta.site_name') }} home" class="inline-flex items-center">
-                    <img class="rounded-full h-8 md:h-10 mr-3" src="{{ asset('/img/logo.jpg')}}" alt="{{ config('services.meta.site_name') }} logo" />
+                <a href="{{url('/')}}" title="{{ config('services.meta.site_name') }} home"
+                    class="inline-flex items-center">
+                    <img class="rounded-full h-8 md:h-10 mr-3" src="{{ asset('/img/logo.jpg')}}"
+                        alt="{{ config('services.meta.site_name') }} logo" />
 
-                    <h1 class="text-lg md:text-2xl text-blue-800 font-semibold hover:text-blue-600 my-0">{{ config('services.meta.site_name') }} <br>
+                    <h1 class="text-lg md:text-2xl text-blue-800 font-semibold hover:text-blue-600 my-0">
+                        {{ config('services.meta.site_name') }} <br>
                         <span class="text-sm text-gray-600">{{ config('services.meta.mantra') }}</span></h1>
                 </a>
             </div>
@@ -117,12 +123,15 @@
         </ul>
         <ul class="flex flex-col md:flex-row justify-center list-reset">
             <li class="md:mr-2">
-                &copy; <a href="#" title="{{config('services.meta.site_name')}}">{{config('services.meta.site_name')}}</a> {{ date('Y') }}.
+                &copy; <a href="#"
+                    title="{{config('services.meta.site_name')}}">{{config('services.meta.site_name')}}</a>
+                {{ date('Y') }}.
             </li>
 
             <li>
                 Built with <a href="https://wink.themsaid.com/" title="A Laravel-based publishing platform">Wink</a>
-                and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind
+                    CSS</a>.
             </li>
         </ul>
     </footer>
