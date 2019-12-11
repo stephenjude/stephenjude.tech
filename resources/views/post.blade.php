@@ -24,6 +24,8 @@ $post = $data['post'];
 
 @section('body')
 
+@include('components.ads')
+
 <h1 class="leading-none mb-2">{{ $post->title }}</h1>
 
 <p class="text-gray-700 text-xm md:mt-0">
@@ -32,8 +34,6 @@ $post = $data['post'];
         {{ read_time($data['post']->body) }}
     </a>
 </p>
-
-@include('components.ads')
 
 <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
     {!! $post->body !!}

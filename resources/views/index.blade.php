@@ -8,9 +8,11 @@
 @endpush
 
 @section('body')
-<h1>Recent Articles</h1>
 
 @include('components.ads')
+
+<h1>Recent Articles</h1>
+
 
 <hr class="border-b my-6">
 
