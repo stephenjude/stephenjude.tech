@@ -80,7 +80,7 @@ class BlogController extends Controller
     {
         $meta = [
             'title'   => 'About',
-            'description' => 'Join my weekly newsletter and never miss out on new tutorials, tips, and more.',
+            'description' => 'I am a software developer working primary on PHP and Android applications.',
         ];
 
         return view('about', compact('meta'));
