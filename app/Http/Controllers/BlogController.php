@@ -25,18 +25,6 @@ class BlogController extends Controller
         return view('index', compact('data'));
     }
 
-
-    /**
-     * Show about blog.
-     *
-     * @return View
-     */
-    public function about()
-    {
-        return view('about');
-    }
-
-
     /**
      * Show a post given a slug.
      *
@@ -51,7 +39,6 @@ class BlogController extends Controller
         $post = $posts->firstWhere('slug', $slug);
 
         if (optional($post)->published) {
-
             $next = $posts->sortByDesc('publish_date')->firstWhere('publish_date', '>', optional($post)->publish_date);
             $prev = $posts->sortByDesc('publish_date')->firstWhere('publish_date', '<', optional($post)->publish_date);
 
@@ -84,6 +71,21 @@ class BlogController extends Controller
     }
 
 
+    /**
+     * Show about blog.
+     *
+     * @return View
+     */
+    public function about()
+    {
+        $meta = [
+            'title'   => 'About',
+            'description' => 'Join my weekly newsletter and never miss out on new tutorials, tips, and more.',
+        ];
+
+        return view('about', compact('meta'));
+    }
+
 
     /**
      * show email subscription form
@@ -92,6 +94,11 @@ class BlogController extends Controller
      */
     public function newsletter()
     {
-        return view('newsletter');
+        $meta = [
+            'title'   => 'Weekly Newsletter',
+            'description' => 'Join my weekly newsletter and never miss out on new tutorials, tips, and more.',
+        ];
+
+        return view('newsletter', compact('meta'));
     }
 }
