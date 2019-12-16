@@ -19,9 +19,3 @@ Route::get('/about', 'BlogController@about')->name('about');
 Route::get('/articles/{slug}', 'BlogController@findPostBySlug')->name('blog.post');
 Route::get('/fresh', 'BlogController@updateIndexedArticles')->name('index.json');
 Route::get('/newsletter', 'BlogController@newsletter')->name('newsletter');
-
-Route::get('posts', function () {
-    $posts = WinkPost::with('tags')->get();
-
-    return response()->json($posts, 200);
-});
