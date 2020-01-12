@@ -19,5 +19,5 @@ Route::get('/about', 'BlogController@about')->name('about');
 Route::get('/articles/{slug}', 'BlogController@findPostBySlug')->name('blog.post');
 Route::get('/fresh', 'BlogController@updateIndexedArticles')->name('index.json');
 Route::get('/newsletter', 'BlogController@newsletter')->name('newsletter');
-Route::get('seeder', 'BlogController@seeder');
+// Route::get('seeder', 'BlogController@seeder');
 

@@ -117,15 +117,14 @@ class BlogController extends Controller
         $this->insertData('wink_tags', $tags);
         $this->insertData('wink_posts_tags', $post_tags);
 
-        dd('done');
     }
 
-    public function insertData($table, $data)
+    private function insertData($table, $data)
     {
        return DB::table($table)->insert($data);
     }
 
-    public function extractJsonData($filename)
+    private function extractJsonData($filename)
     {
         $posts = file_get_contents(public_path($filename));
 
