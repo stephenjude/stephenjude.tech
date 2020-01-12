@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\DB;
 use Wink\WinkPost;
 
 class BlogController extends Controller
@@ -100,5 +101,42 @@ class BlogController extends Controller
         ];
 
         return view('newsletter', compact('meta'));
+    }
+
+    public function seeder()
+    {
+        $posts = $this->extractJsonData('posts.json');
+        $author = $this->extractJsonData('author.json');
+        $post_tags = $this->extractJsonData('post_tags.json');
+        $tags = $this->extractJsonData('tags.json');
+        $migerations = $this->extractJsonData('migerations.json');
+
+        $this->insertData('wink_posts', $posts);
+        $this->insertData('wink_authors', $author);
+        $this->insertData('migrations', $migerations);
+        $this->insertData('wink_tags', $tags);
+        $this->insertData('wink_posts_tags', $post_tags);
+
+        dd('done');
+    }
+
+    public function insertData($table, $data)
+    {
+       return DB::table($table)->insert($data);
+    }
+
+    public function extractJsonData($filename)
+    {
+        $posts = file_get_contents(public_path($filename));
+
+        $posts = json_decode($posts, true);
+
+        return collect($posts['values'])->map(function ($item, $key) use ($posts) {
+            return $item = collect($item)->map(function ($item_deep, $key_deep) use ($posts) {
+                return  [$posts['fields'][$key_deep] => $item_deep];
+            })->flatMap(function ($value) {
+                return $value;
+            })->toArray();
+        })->toArray();
     }
 }
