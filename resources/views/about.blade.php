@@ -14,24 +14,18 @@
 <p class="mb-6">Hello, I am Stephen Jude</p>
 
 <p class="mb-6">
-    I am a software developer working primary on PHP and Android applications.
+    I am a software developer working primary on PHP and Laravel applications.
 
     I am driven by learning and I’ve grown to embrace the challenges that development can bring.
 </p>
 
 <p class="mb-6">I am a firm believer that people with passion can change the world for better (Jude 1:22 kjv) </p>
 
-<p>If you are looking for a web developer/android developer for contract,
+<p>If you are looking for a web developer developer for contract,
     <a href="mailto:stephenjudesuccess@gmail.com"> feel free to reach out</a>.</p>
 
 <p class="mb-6">
     I am also available for speaking or consulting.
 </p>
 
-@include('components.ads')
-
-@endsection
-
-@section('action')
-    @include('components.call-to-action')
 @endsection

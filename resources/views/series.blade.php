@@ -11,7 +11,7 @@
 
     @include('components.ads')
 
-    <h2>Series: {{$data['series']}}</h2>
+    <h1>Series: {{$data['series']}}</h1>
 
     <hr class="border-b my-6">
 
@@ -23,7 +23,3 @@
         @endif
     @endforeach
 @stop
-
-@section('action')
-    @include('components.call-to-action')
-@endsection
