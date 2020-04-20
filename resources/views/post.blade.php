@@ -6,10 +6,10 @@ $post = $data['post'];
 @endphp
 
 @push('meta')
-<meta name="keywords" content="{{ $post['tags'] ??  implode(',', $post['tags']) }}">
+<meta name="keywords" content="{{ $post->tags->implode('name', ', ') }}">
 <meta name="description" content="{{ $data['meta']['meta_description'] }}">
 <meta property="og:type" content="article">
-<meta name="og:title" content="{{ $data['meta']['opengraph_title'] }}">
+<meta name="og:title" content="{{ $post->title }}">
 <meta name="og:description" content="{{ $data['meta']['meta_description'] }}">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ $post->title }}">
@@ -21,10 +21,7 @@ $post = $data['post'];
 @endisset
 @endpush
 
-
 @section('body')
-
-@include('components.ads')
 
 <h1 class="leading-none mb-2">{{ $post->title }}</h1>
 

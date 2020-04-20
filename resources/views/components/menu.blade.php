@@ -1,4 +1,8 @@
 <nav class="hidden lg:flex items-center justify-end text-lg">
+    <a title="laravel lessons" href="{{route('laravel.lessons')}}"
+        class="ml-6 text-gray-700 hover:text-blue-600 'active text-blue-600' }}">
+        Laravel Series
+    </a>
     <a title="newsletter" href="{{url('newsletter')}}"
         class="ml-6 text-gray-700 hover:text-blue-600 'active text-blue-600' }}">
         Newsletter

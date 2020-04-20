@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Wink\WinkPost;
@@ -31,16 +32,20 @@ class BlogController extends Controller
      *
      * @return View
      */
-    public function draft()
+    public function laravelLessons()
     {
         $data = [
             'posts' => WinkPost::with('tags')
-                ->draft()
-                ->simplePaginate(12)
+                ->live()
+                ->whereHas('tags', function (Builder $query) {
+                    $query->where('slug', 'laravel-lessons');
+                })->orderBy('publish_date', 'DESC')
+                ->simplePaginate(12),
+                'series' => 'The Ultimate Revelation of Laravel For Biginners (Laravel Lessons) '
         ];
-        return view('index', compact('data'));
-    }
 
+        return view('series', compact('data'));
+    }
 
     /**
      * Show a post given a slug.

@@ -9,8 +9,6 @@
 
 @section('body')
 
-@include('components.ads')
-
 <h1>Recent Articles</h1>
 
 
