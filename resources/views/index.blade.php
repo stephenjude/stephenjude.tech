@@ -39,8 +39,6 @@
 @endif
 @stop
 
-@section('newsletter')
-<section role="main" class="flex-auto w-full container max-w-4xl mx-auto px-6">
-    @include('components.newsletter-signup')
-</section>
+@section('action')
+    @include('components.call-to-action')
 @endsection

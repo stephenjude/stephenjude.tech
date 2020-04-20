@@ -64,6 +64,8 @@
     <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-16 px-6">
         @yield('body')
 
+        @yield('action')
+
         @yield('newsletter')
     </main>
 
@@ -122,10 +124,8 @@
 
         </ul>
         <ul class="flex flex-col md:flex-row justify-center list-reset">
-            <li class="md:mr-2">
-                &copy; <a href="#"
-                    title="{{config('services.meta.site_name')}}">{{config('services.meta.site_name')}}</a>
-                {{ date('Y') }}.
+            <li class="md:mr-2">Written by 
+                <a href="{{url('/')}}">Stephen Jude</a>
             </li>
 
             <li>
