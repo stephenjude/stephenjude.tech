@@ -10,10 +10,10 @@ $post = $data['post'];
 <meta name="description" content="{{ $data['meta']['meta_description'] }}">
 <meta property="og:type" content="article">
 <meta name="og:title" content="{{ $data['meta']['opengraph_title'] }}">
-<meta name="og:description" content="{{ $data['meta']['opengraph_description'] }}">
+<meta name="og:description" content="{{ $data['meta']['meta_description'] }}">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{{ $data['meta']['opengraph_title'] }}">
-<meta name="twitter:description" content="{{ $data['meta']['opengraph_description'] }}">
+<meta name="twitter:title" content="{{ $post->title }}">
+<meta name="twitter:description" content="{{ $data['meta']['meta_description'] }}">
 
 @isset($data['post']->featured_image)
 <meta name="og:image" content="{{ url($data['post']->featured_image) }}">

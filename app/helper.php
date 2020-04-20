@@ -5,6 +5,11 @@ function post_url($slug)
     return route('blog.post', $slug);
 }
 
+function draft_url($id)
+{
+    return route('draft.post', $id);
+}
+
 function format_date($date)
 {
     $date = \Carbon\Carbon::parse($date);

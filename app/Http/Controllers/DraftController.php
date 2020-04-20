@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Wink\WinkPost;
 
-class BlogController extends Controller
+class DraftController extends Controller
 {
 
 
@@ -19,26 +19,10 @@ class BlogController extends Controller
     {
         $data = [
             'posts' => WinkPost::with('tags')
-                ->live()
-                ->orderBy('publish_date', 'DESC')
-                ->simplePaginate(12)
-        ];
-        return view('index', compact('data'));
-    }
-
-    /**
-     * Show blog homepage.
-     *
-     * @return View
-     */
-    public function draft()
-    {
-        $data = [
-            'posts' => WinkPost::with('tags')
                 ->draft()
                 ->simplePaginate(12)
         ];
-        return view('index', compact('data'));
+        return view('drafts', compact('data'));
     }
 
 
@@ -48,26 +32,14 @@ class BlogController extends Controller
      * @param string $slug
      * @return View
      */
-    public function findPostBySlug(string $slug)
+    public function findPostById($id)
     {
-        $posts = WinkPost::with('tags')
-            ->live()->get();
 
-        $post = $posts->firstWhere('slug', $slug);
+        $post = WinkPost::with('tags')->where('id', $id)->first();
 
-        if (optional($post)->published) {
-            $next = $posts->sortByDesc('publish_date')->firstWhere('publish_date', '>', optional($post)->publish_date);
-            $prev = $posts->sortByDesc('publish_date')->firstWhere('publish_date', '<', optional($post)->publish_date);
+        if ($post) {
 
-            $data = [
-                'author' => $post->author,
-                'post'   => $post,
-                'meta'   => $post->meta,
-                'next'   => $next,
-                'prev'   => $prev,
-            ];
-
-            return view('post', compact('data'));
+            return view('draft', compact('post'));
         }
 
         abort(404);
