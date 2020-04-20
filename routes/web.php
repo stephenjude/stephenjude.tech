@@ -27,5 +27,5 @@ Route::get('/fresh', 'BlogController@updateIndexedArticles')->name('index.json')
 Route::get('/newsletter', 'BlogController@newsletter')->name('newsletter');
 // Route::get('seeder', 'BlogController@seeder');
 
-Route::get('/series/laravel-lessons', 'BlogController@laravelLessons')->name('laravel.lessons');
+Route::get('/series/laravel-lessons', 'SeriesController@laravelLessons')->name('laravel.lessons');
 

@@ -28,26 +28,6 @@ class BlogController extends Controller
     }
 
     /**
-     * Show blog homepage.
-     *
-     * @return View
-     */
-    public function laravelLessons()
-    {
-        $data = [
-            'posts' => WinkPost::with('tags')
-                ->live()
-                ->whereHas('tags', function (Builder $query) {
-                    $query->where('slug', 'laravel-lessons');
-                })->orderBy('publish_date', 'DESC')
-                ->simplePaginate(12),
-                'series' => 'The Ultimate Revelation of Laravel For Biginners (Laravel Lessons) '
-        ];
-
-        return view('series', compact('data'));
-    }
-
-    /**
      * Show a post given a slug.
      *
      * @param string $slug
