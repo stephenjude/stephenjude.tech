@@ -7,13 +7,13 @@ $post = $data['post'];
 
 @push('meta')
 <meta name="keywords" content="{{ $post->tags->implode('name', ', ') }}">
-<meta name="description" content="{{ $data['meta']['meta_description'] }}">
+<meta name="description" content="{{  $post->excerpt }}">
 <meta property="og:type" content="article">
 <meta name="og:title" content="{{ $post->title }}">
-<meta name="og:description" content="{{ $data['meta']['meta_description'] }}">
+<meta name="og:description" content="{{  $post->excerpt }}">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ $post->title }}">
-<meta name="twitter:description" content="{{ $data['meta']['meta_description'] }}">
+<meta name="twitter:description" content="{{  $post->excerpt }}">
 
 @isset($data['post']->featured_image)
 <meta name="og:image" content="{{ url($data['post']->featured_image) }}">
