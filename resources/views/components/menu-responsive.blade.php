@@ -1,7 +1,7 @@
 <nav id="js-nav-menu" class="nav-menu hidden lg:hidden">
     <ul class="list-reset my-0">
         <li class="pl-4">
-            <a title="Laravel Lessons" href="{{url('laravel.lessons')}}"
+            <a title="Laravel Lessons" href="{{route('laravel.lessons')}}"
                 class="nav-menu__item hover:text-blue-500 text-blue">Laravel Lessons</a>
         </li>
         <li class="pl-4">

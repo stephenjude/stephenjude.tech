@@ -19,7 +19,7 @@ class SeriesController extends Controller
                 ->live()
                 ->whereHas('tags', function (Builder $query) {
                     $query->where('slug', 'laravel-lessons');
-                })->orderBy('publish_date', 'DESC')
+                })->orderBy('publish_date')
                 ->simplePaginate(12),
             'series_banner' => 'https://i.ibb.co/0GKKZwx/ERAIStf-Xs-AA-u7-X-format-jpg-name-large.jpg',
             'series_title' => 'The Ultimate Revelation of Laravel For Biginners (Laravel Lessons) ',
