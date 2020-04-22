@@ -22,7 +22,7 @@ class SeriesController extends Controller
                 })->orderBy('publish_date')
                 ->simplePaginate(12),
             'series_banner' => 'https://i.ibb.co/0GKKZwx/ERAIStf-Xs-AA-u7-X-format-jpg-name-large.jpg',
-            'series_title' => 'The Ultimate Revelation of Laravel For Biginners (Laravel Lessons) ',
+            'series_title' => 'The Ultimate Revelation of Laravel For Beginners (Laravel Lessons) ',
             'series_description' => 'Learn the fundamentals on how to build web applications with Laravel. Its going to be simple and actionable, definitely a REVELATION!'
         ];
 
