@@ -21,8 +21,8 @@
 
 <p class="mb-6">I am a firm believer that people with passion can change the world for better (Jude 1:22 kjv) </p>
 
-<p>If you are looking for a web developer developer for contract,
-    <a href="mailto:stephenjudesuccess@gmail.com"> feel free to reach out</a>.</p>
+<p>If you are looking for a web developer for contract,
+    <a href="mailto:hello@stephenjude.me"> feel free to reach out</a>.</p>
 
 <p class="mb-6">
     I am also available for speaking or consulting.
