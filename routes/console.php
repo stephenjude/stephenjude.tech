@@ -29,9 +29,9 @@ Artisan::command('generate:feed', function () {
 
     $site = [
 
-        'name' => 'stephenjude.tech', // Simplest Web
+        'name' => 'stephenjude.me', // Simplest Web
 
-        'url' => 'http://stephenjude.tech/rss.xml', // Link to your rss.xml.
+        'url' => url('/').'/rss.xm', // Link to your rss.xml.
 
         'description' => 'I build for the next billion users',
 
