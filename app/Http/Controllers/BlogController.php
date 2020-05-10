@@ -22,7 +22,7 @@ class BlogController extends Controller
             'posts' => WinkPost::with('tags')
                 ->live()
                 ->orderBy('publish_date', 'DESC')
-                ->simplePaginate(12)
+                ->simplePaginate(30)
         ];
         return view('index', compact('data'));
     }
