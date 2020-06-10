@@ -7,11 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="{{ $meta['description'] ?? config('services.meta.mantra') }}">
-    <link rel="alternate" type="application/rss+xml" title="stephenjude.tech" href="http://stephenjude.tech/rss.xml" />
+
+    <link rel="canonical" href="{{url()->current()}}" />
+
+    <link rel="alternate" type="application/rss+xml" title="stephenjude.tech" href="http://stephenjude.me/rss.xml" />
     <title>{{ $meta['title'] ?? config('services.meta.site_name') }} ―
         {{ $meta['description'] ?? config('services.meta.mantra') }}</title>
 
     <link rel="home" href="{{ url('/') }}">
+    
     <link rel="icon" href="{{asset('img/favicon.ico')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -124,7 +128,7 @@
 
         </ul>
         <ul class="flex flex-col md:flex-row justify-center list-reset">
-            <li class="md:mr-2">Written by 
+            <li class="md:mr-2">Written by
                 <a href="{{url('/')}}">Stephen Jude</a>
             </li>
 
