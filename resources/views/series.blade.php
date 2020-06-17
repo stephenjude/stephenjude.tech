@@ -9,7 +9,10 @@
 <meta property="og:type" content="article">
 <meta name="og:title" content="{{$data['series_title'] }}">
 <meta name="og:description" content="{{ $data['series_description'] }}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{$data['series_title'] }}">
 <meta name="twitter:description" content="{{ $data['series_description'] }}">
 <meta name="og:image" content="{{ $data['series_banner'] }}">

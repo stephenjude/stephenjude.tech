@@ -11,7 +11,11 @@ $post = $data['post'];
 <meta property="og:type" content="article">
 <meta name="og:title" content="{{ $post->title }}">
 <meta name="og:description" content="{{  $post->excerpt }}">
-<meta name="twitter:card" content="summary">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ $post->title }}">
 <meta name="twitter:description" content="{{  $post->excerpt }}">
 
