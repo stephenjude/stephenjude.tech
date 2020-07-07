@@ -10,12 +10,12 @@
 
     <link rel="canonical" href="{{url()->current()}}" />
 
-    <link rel="alternate" type="application/rss+xml" title="stephenjude.tech" href="http://stephenjude.me/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="stephenjude.me" href="http://stephenjude.me/rss.xml" />
     <title>{{ $meta['title'] ?? config('services.meta.site_name') }} ―
         {{ $meta['description'] ?? config('services.meta.mantra') }}</title>
 
     <link rel="home" href="{{ url('/') }}">
-    
+
     <link rel="icon" href="{{asset('img/favicon.ico')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -39,6 +39,13 @@
 </head>
 
 <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
+
+    <header class="flex items-center shadow bg-white border-b" role="banner">
+        <div class="container flex items-center max-w-8xl mx-auto">
+            @include('components.job')
+        </div>
+    </header>
+
     <header class="flex items-center shadow bg-white border-b h-24 py-4" role="banner">
         <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
             <div class="flex items-center">
@@ -118,7 +125,7 @@
                 </a>
             </li>
             <li class="inline-block">
-                <a href="http://stephenjude.tech/rss.xml" target="_blank" title="Atom">
+                <a href="http://stephenjude.me/rss.xml" target="_blank" title="Atom">
                     <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
