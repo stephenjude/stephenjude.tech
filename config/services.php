@@ -36,6 +36,6 @@ return [
 
     'meta' => [
         'site_name' => 'Stephen Jude',
-        'mantra' => 'I build for the next billion users',
+        'mantra' => 'Full Stack Web Developer',
     ],
 ];
