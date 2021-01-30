@@ -6,7 +6,7 @@
             <span class="font-semibold mr-2 text-left flex-auto">
                 Hey, do you know you can deploy your Laravel application on a shared server? <a
                     class="text-indigo-100 hover:text-indigo-100 no-underline"
-                    href="https://getlitehost.com/sharedhosting.php" target="_blank">Learn more</a>.
+                    href="https://getlitehost.com/sharedhosting.php" target="_blank">Learn more</a>
             </span>
             <a class="text-indigo-100 "
                 href="https://getlitehost.com/sharedhosting.php" target="_blank">
