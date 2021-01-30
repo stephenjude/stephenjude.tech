@@ -2,9 +2,9 @@
     <div class="bg-indigo-700 text-center py-4 lg:px-4 w-full">
         <div class="p-2 bg-indigo-600 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
             role="alert">
-            <span class="flex rounded-full bg-indigo-700 uppercase px-2 py-1 text-xs font-bold mr-3">Hire me</span>
+            <span class="flex rounded-full bg-indigo-700 uppercase px-2 py-1 text-xs font-bold mr-3">Litehost</span>
             <span class="font-semibold mr-2 text-left flex-auto">
-                Hey, have you tried Litehost's fast & affordable web hosting packages? <a
+                Hey, do you know you can deploy your Laravel application on a shared server? <a
                     class="text-indigo-100 hover:text-indigo-100 no-underline"
                     href="https://getlitehost.com/sharedhosting.php">Click Here</a>.
             </span>
