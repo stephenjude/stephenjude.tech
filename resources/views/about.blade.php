@@ -3,7 +3,7 @@
 @push('meta')
 <meta property="og:title" content="About {{ $meta['title'] ?? config('services.meta.site_name') }}" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="{{ url()->full() }}" />>
+<meta property="og:url" content="{{ url()->full() }}" />
 @endpush
 
 @section('body')
